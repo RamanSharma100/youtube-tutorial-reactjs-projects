@@ -14,20 +14,13 @@ const TodoApp = () => {
       todo: 'Eat',
       completed: true,
     },
-    {
-      id: 3,
-      todo: 'Repeat',
-      completed: false,
-    },
-    {
-      id: 4,
-      todo: 'Google',
-      completed: false,
-    },
   ]);
+  const handleChange = (e) => {
+    setstate([...state, e]);
+  };
   return (
     <div className="col-md-5 text-center mx-auto">
-      <Form />
+      <Form handleChange={handleChange} lists={state} />
       <TodoList lists={state} />
     </div>
   );
