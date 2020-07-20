@@ -3,7 +3,7 @@ import Form from './Form';
 import TodoList from './TodoList';
 
 const TodoApp = () => {
-  const [state, setstate] = useState([
+  const [state, setState] = useState([
     {
       id: 1,
       todo: 'Code',
@@ -16,12 +16,19 @@ const TodoApp = () => {
     },
   ]);
   const handleChange = (e) => {
-    setstate([...state, e]);
+    setState([...state, e]);
+  };
+  const handleClick = (e) => {
+    const objIndex = state.findIndex((obj) => obj.id == e);
+    let newArr = [...state];
+    state[objIndex].completed = true;
+
+    setState(newArr);
   };
   return (
     <div className="col-md-5 text-center mx-auto">
       <Form handleChange={handleChange} lists={state} />
-      <TodoList lists={state} />
+      <TodoList handleClick={handleClick} lists={state} />
     </div>
   );
 };
