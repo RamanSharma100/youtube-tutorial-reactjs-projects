@@ -8,12 +8,23 @@ const TodoList = (props) => {
         <div
           className="list d-flex align-items-center justify-content-center p-0"
           key={list.id}>
-          <input type="checkbox" />
-          <p className="font-weight-bold mt-3 text-center">{list.todo}</p>
-          {list.checked ? (
-            <i className="fa fa-trash" aria-hidden="true"></i>
+          {list.completed ? (
+            <React.Fragment>
+              <p
+                className="font-weight-bold mt-3 text-center"
+                style={{ textDecoration: 'line-through' }}>
+                {list.todo}
+              </p>
+              <i
+                className="fa fa-trash text-danger"
+                aria-hidden="true"
+                style={{ cursor: 'Pointer' }}></i>
+            </React.Fragment>
           ) : (
-            ''
+            <React.Fragment>
+              <input type="checkbox" />
+              <p className="font-weight-bold mt-3 text-center">{list.todo}</p>
+            </React.Fragment>
           )}
         </div>
       ))}

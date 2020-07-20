@@ -12,7 +12,7 @@ const TodoApp = () => {
     {
       id: 2,
       todo: 'Eat',
-      completed: false,
+      completed: true,
     },
     {
       id: 3,
