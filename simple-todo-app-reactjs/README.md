@@ -1,3 +1,22 @@
+## SImple TODO app using Reactjs
+
+This is the simple todo app project for my youtube channel reactjs series 
+
+simply download it and run the command :
+
+### `npm install`
+
+this command will install all required dependencies, then run :
+
+### `npm start`
+
+to see the project on your default browser
+
+ 
+<hr/>
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
