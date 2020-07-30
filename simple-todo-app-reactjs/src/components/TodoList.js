@@ -18,7 +18,8 @@ const TodoList = (props) => {
               <i
                 className="fa fa-trash text-danger"
                 aria-hidden="true"
-                style={{ cursor: 'Pointer' }}></i>
+                style={{ cursor: 'Pointer' }}
+                onClick={() => props.handleDelete(list.id)}></i>
             </React.Fragment>
           ) : (
             <React.Fragment>
